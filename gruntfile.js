@@ -41,6 +41,9 @@ module.exports = function (grunt) {
                     'node_modules'
                 ]
             }
+        },
+        coveralls: {
+            src: 'coverage/lcov.info'
         }
     });
 
@@ -48,6 +51,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-ts');
     grunt.loadNpmTasks('grunt-mocha-istanbul');
     grunt.loadNpmTasks('remap-istanbul');
+    grunt.loadNpmTasks('grunt-coveralls');
 
     grunt.registerTask('compile', [
         'clean',
@@ -58,6 +62,11 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'compile',
         'remapIstanbul'
+    ]);
+
+    grunt.registerTask('travis', [
+        'build',
+        'coveralls'
     ]);
 
     grunt.registerTask('default', [
