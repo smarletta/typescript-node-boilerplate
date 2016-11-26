@@ -4,7 +4,7 @@
   "description": "Boilerplate for creating NodeJS modules written in TypeScript. Includes setup for whole build, testing environment, doc generation and coverage reports",
   "main": "main/src/index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt"
   },
   "repository": {
     "type": "git",
