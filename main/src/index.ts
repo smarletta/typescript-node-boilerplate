@@ -1,1 +1,2 @@
-// modules file
+// example module file
+export * from './hello/World';

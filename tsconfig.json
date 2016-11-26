@@ -9,7 +9,10 @@
         "sourceMap": true,
         "inlineSources": true,
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "typeRoots": [
+            "@types"
+        ]
     },
     "include": [
         "main/**/*.ts"

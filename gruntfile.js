@@ -16,7 +16,7 @@ module.exports = function (grunt) {
             src: {
                 src: 'main/test',
                 options: {
-                    mask: '*.spec.js'
+                    mask: '**/*.spec.js'
                 }
             }
         },
@@ -25,7 +25,7 @@ module.exports = function (grunt) {
                 src: 'coverage/coverage.json',
                 options: {
                     reports: {
-                        'lcovhtml': 'html-report',
+                        'html': 'coverage/html-report',
                         'json': 'coverage/coverage.json'
                     }
                 }
@@ -33,9 +33,7 @@ module.exports = function (grunt) {
         },
         ts: {
             default: {
-                options: {
-                    tsconfig: true
-                },
+                tsconfig: true,
                 include: [
                     'main/**/*.ts'
                 ],
@@ -47,7 +45,22 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-typescript');
+    grunt.loadNpmTasks('grunt-ts');
     grunt.loadNpmTasks('grunt-mocha-istanbul');
     grunt.loadNpmTasks('remap-istanbul');
+
+    grunt.registerTask('compile', [
+        'clean',
+        'ts',
+        'mocha_istanbul'
+    ]);
+
+    grunt.registerTask('build', [
+        'compile',
+        'remapIstanbul'
+    ]);
+
+    grunt.registerTask('default', [
+        'build'
+    ]);
 };
