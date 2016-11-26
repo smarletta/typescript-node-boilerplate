@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/smarletta/typescript-node-boilerplate.svg?branch=master)](https://travis-ci.org/smarletta/typescript-node-boilerplate)
+
 # typescript-node-boilerplate
 Boilerplate for writing NodeJS modules in TypeScript including tests, coverage reports and CI integration.
 
