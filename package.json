@@ -1,0 +1,44 @@
+{
+  "name": "typescript-node-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for creating NodeJS modules written in TypeScript. Includes setup for whole build, testing environment, doc generation and coverage reports",
+  "main": "main/src/index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smarletta/typescript-node-boilerplate.git"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "boilerplate",
+    "mocha",
+    "chai",
+    "sinon",
+    "remapIstanbul",
+    "typdoc\u001b[D\u001b[D\u001b[Dedoc"
+  ],
+  "author": "Sebastiano Marletta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smarletta/typescript-node-boilerplate/issues"
+  },
+  "homepage": "https://github.com/smarletta/typescript-node-boilerplate#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-typescript": "^0.8.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "mocha-istanbul": "^0.3.0",
+    "mocha-typescript": "^1.0.11",
+    "remap-istanbul": "^0.7.0",
+    "sinon": "^1.17.6",
+    "tslint": "^4.0.2",
+    "typedoc": "^0.5.1",
+    "typescript": "^2.0.10"
+  }
+}
